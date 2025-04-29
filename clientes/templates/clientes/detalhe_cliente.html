@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Detalhe do Cliente</h1>
+<ul>
+    <li><strong>Nome:</strong> {{ cliente.nome }}</li>
+    <li><strong>Sobrenome:</strong> {{ cliente.sobrenome }}</li>
+    <li><strong>CPF:</strong> {{ cliente.cpf }}</li>
+    <li><strong>Gênero:</strong> {{ cliente.get_genero_display }}</li>
+    <li><strong>Estado Civil:</strong> {{ cliente.get_estado_civil_display }}</li>
+    <li><strong>Telefone:</strong> {{ cliente.telefone }}</li>
+    <li><strong>Email:</strong> {{ cliente.email }}</li>
+    <li><strong>Rua/Avenida:</strong> {{ cliente.rua }}</li>
+    <li><strong>Número:</strong> {{ cliente.numero }}</li>
+    <li><strong>Complemento:</strong> {{ cliente.complemento }}</li>
+    <li><strong>Bairro:</strong> {{ cliente.bairro }}</li>
+    <li><strong>Cidade:</strong> {{ cliente.cidade }}</li>
+    <li><strong>Estado:</strong> {{ cliente.estado }}</li>
+    <li><strong>CEP:</strong> {{ cliente.cep }}</li>
+</ul>
+<a href="{% url 'clientes:lista_clientes' %}">Voltar para a lista de clientes</a>
+{% endblock %}
